@@ -3,6 +3,13 @@
 Este arquivo serve como lembrete dos comandos básicos do **Git** para usar no projeto.
 
 ---
+⚡ Fluxo rápido (sempre que atualizar)
+```bash
+git add .
+git commit -m "comentário"
+git push
+```
+
 
 # ⚙️ 1. Configuração Inicial (apenas uma vez no computador)
 
