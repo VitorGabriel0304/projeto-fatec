@@ -1,0 +1,136 @@
+# 📚 Guia Rápido de Comandos Git / GitHub
+
+Este arquivo serve como lembrete dos comandos básicos do **Git** para usar no projeto.
+
+---
+
+# ⚙️ 1. Configuração Inicial (apenas uma vez no computador)
+
+Adiciona o nome do desenvolvedor:
+
+```bash
+git config --global user.name "Vitor Gabriel Vido"
+```
+
+Adiciona o e-mail do desenvolvedor:
+
+```bash
+git config --global user.email vitorlatero03@gmail.com
+```
+
+Verifica se a configuração foi aplicada:
+
+```bash
+git config --list
+```
+
+---
+
+# 📥 2. Clonar um Repositório (baixar projeto do GitHub)
+
+Clona o repositório para o computador:
+
+```bash
+git clone https://github.com/USUARIO/NOME-REPOSITORIO.git
+```
+
+Entrar na pasta do projeto:
+
+```bash
+cd NOME-REPOSITORIO
+```
+
+---
+
+# 🚀 3. Iniciar Git no Projeto (caso o projeto ainda não tenha Git)
+
+Inicializa o Git dentro da pasta do projeto:
+
+```bash
+git init
+```
+
+Conecta o projeto ao repositório do GitHub:
+
+```bash
+git remote add origin https://github.com/USUARIO/NOME-REPOSITORIO.git
+```
+
+---
+
+# 📂 4. Verificar situação dos arquivos
+
+Mostra os arquivos modificados ou não rastreados:
+
+```bash
+git status
+```
+
+---
+
+# ⬆️ 5. Preparar arquivos para envio
+
+Adiciona todos os arquivos modificados:
+
+```bash
+git add .
+```
+
+---
+
+# 💬 6. Criar um commit
+
+Salva uma versão do projeto com comentário:
+
+```bash
+git commit -m "descrição da atualização"
+```
+
+---
+
+# 🔥 7. Primeiro envio para o GitHub (primeiro commit)
+
+Define o branch principal como **main**:
+
+```bash
+git branch -M main
+```
+
+Envia os arquivos para o GitHub pela primeira vez:
+
+```bash
+git push -u origin main
+```
+
+---
+
+# 🔁 8. Se NÃO for o primeiro commit (subir atualizações)
+
+Adicionar arquivos modificados:
+
+```bash
+git add .
+```
+
+Criar um commit:
+
+```bash
+git commit -m "nova atualização"
+```
+
+Subir as alterações para o GitHub:
+
+```bash
+git push
+```
+
+---
+
+# ⚡ Fluxo rápido (o que você mais vai usar)
+
+```bash
+git add .
+git commit -m "atualização"
+git push
+```
+

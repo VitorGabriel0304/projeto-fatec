@@ -1,0 +1,101 @@
+====================================
+💻 GUIA RÁPIDO DE COMANDOS DO CMD
+====================================
+
+
+📂 NAVEGAÇÃO ENTRE PASTAS
+
+➡️ Entrar em uma pasta
+cd nome_da_pasta
+
+⬅️ Voltar uma pasta
+cd ..
+
+🏠 Voltar para a pasta do usuário
+cd %userprofile%
+
+📍 Mostrar caminho atual
+cd
+
+📋 Listar arquivos da pasta
+dir
+
+
+------------------------------------
+
+
+📁 CRIAR E GERENCIAR PASTAS
+
+📁 Criar uma pasta
+mkdir nome_da_pasta
+
+📁 Criar várias pastas
+mkdir pasta1 pasta2 pasta3
+
+✏️ Renomear pasta ou arquivo
+ren nome_antigo nome_novo
+
+❌ Apagar pasta vazia
+rmdir nome_da_pasta
+
+🔥 Apagar pasta com tudo dentro
+rmdir /s nome_da_pasta
+
+
+------------------------------------
+
+
+📄 GERENCIAR ARQUIVOS
+
+📄 Criar arquivo vazio
+type nul > arquivo.txt
+
+📝 Criar arquivo rapidamente
+echo texto > arquivo.txt
+
+📋 Copiar arquivo
+copy arquivo.txt destino
+
+📦 Mover arquivo
+move arquivo.txt destino
+
+❌ Apagar arquivo
+del arquivo.txt
+
+
+------------------------------------
+
+
+🧹 LIMPEZA E TERMINAL
+
+🧹 Limpar tela do CMD
+cls
+
+🔄 Limpar e mostrar pasta novamente
+cls & dir
+
+
+------------------------------------
+
+
+⚡ COMANDOS ÚTEIS PARA PROGRAMADORES
+
+🚀 Abrir VS Code na pasta atual
+code .
+
+🌐 Abrir pasta no explorador do Windows
+explorer .
+
+🔍 Ver IP da máquina
+ipconfig
+
+📡 Testar conexão com internet
+ping google.com
+
+
+------------------------------------
+
+
+🧠 DICA
+
+Use TAB para autocompletar nomes de pastas.
