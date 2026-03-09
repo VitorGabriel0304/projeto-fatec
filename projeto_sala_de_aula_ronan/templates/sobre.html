@@ -1,30 +1,72 @@
-{% extends "template.html" %}
+{% extends "template.html" %} 
+<!-- Faz a página herdar toda a estrutura do arquivo template.html (layout base do site) -->
 
 {% block titulo %}
 Sobre
 {% endblock %}
+<!-- Define o conteúdo do bloco "titulo" que existe no template.html.
+Normalmente aparece na aba do navegador ou no cabeçalho da página -->
 
 {% block conteudo %}
+<!-- Início do bloco "conteudo", que será inserido dentro do layout principal do template -->
+
 <div class="container">
+    <!-- Classe do Bootstrap que cria um container centralizado com margens laterais automáticas -->
+
     <h1 class="display-4">Sobre o Sistema de Gestão</h1>
+    <!-- Título principal grande usando estilo tipográfico do Bootstrap -->
+
     <p class="lead">
+        <!-- Classe "lead" deixa o parágrafo com destaque (texto maior e mais suave) -->
         Este sistema foi desenvolvido ao longo do semestre na disciplina
         Programação para Internet — FATEC Jahu. O objetivo é gerenciar dados de maneira simples e intuitiva.
     </p>
 
     <h2 class="display-5">Funcionalidades</h2>
+    <!-- Subtítulo com estilo grande do Bootstrap -->
+
     <ul>
+        <!-- Lista não ordenada (com marcadores) -->
+
         <li>Gerenciamento de usuários e perfis.</li>
+        <!-- Item da lista -->
+
         <li>Controle de produtos e estoque.</li>
+
         <li>Relatórios detalhados e gráficos.</li>
+
         <li>Interface responsiva e amigável.</li>
     </ul>
 
     <h2 class="display-5 mt-4">Imagem ilustrativa</h2>
+    <!-- 
+    Outro subtítulo.
+    mt-4 significa margin-top (margem superior) para criar espaçamento
+    -->
+
     <img src="{{ url_for('static', filename='imgs/fatec foto.jfif') }}" 
          alt="Imagem sobre o sistema" 
          class="img-principal">
+         
+    <!--
+    Tag de imagem.
+    url_for('static', ...) é usado no Flask para buscar arquivos da pasta static.
+    Nesse caso ele está pegando a imagem dentro de: static/imgs/
+    alt é o texto alternativo caso a imagem não carregue.
+    img-principal é uma classe CSS personalizada do projeto.
+    -->
 
     <a href="/inicio" class="btn btn-primary mt-4">Voltar ao Início</a>
+    <!--
+    Botão estilizado com Bootstrap.
+    btn → define que é um botão
+    btn-primary → aplica a cor principal (azul)
+    mt-4 → adiciona margem superior
+    href="/inicio" → leva o usuário para a página inicial
+    -->
+
 </div>
+<!-- Fecha o container principal da página -->
+
 {% endblock %}
+<!-- Final do bloco de conteúdo que será inserido no template base -->

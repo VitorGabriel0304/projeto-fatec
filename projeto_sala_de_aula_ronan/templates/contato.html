@@ -1,38 +1,76 @@
 {% extends "template.html" %}
+<!-- Faz esta página herdar toda a estrutura do arquivo template.html -->
 
 {% block titulo %}
 Contato
 {% endblock %}
+<!-- Define o título da página que será inserido no template principal -->
 
 {% block conteudo %}
+<!-- Início do bloco de conteúdo que será exibido dentro do template -->
+
 <div class="container">
+    <!-- Container do Bootstrap que centraliza o conteúdo na página -->
+
     <h1 class="display-4">Fale Conosco</h1>
+    <!-- Título principal da página com estilo grande do Bootstrap -->
+
     <p class="lead">
+        <!-- Classe "lead" deixa o texto um pouco maior e mais destacado -->
         Aqui você pode entrar em contato conosco para dúvidas, sugestões ou suporte.
     </p>
 
     <h2 class="display-5 mt-4">Formulário de Contato</h2>
+    <!-- Subtítulo da seção do formulário
+         mt-4 adiciona margem superior -->
+
     <form>
+    <!-- Início do formulário de contato -->
+
         <div class="mb-3">
+        <!-- Espaçamento inferior entre os campos do formulário -->
+
             <label for="nome" class="form-label">Nome</label>
+            <!-- Rótulo do campo de nome -->
+
             <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+            <!-- Campo de entrada de texto para o nome
+                 form-control aplica o estilo do Bootstrap -->
         </div>
+
         <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
+            <!-- Rótulo do campo de e-mail -->
+
             <input type="email" class="form-control" id="email" placeholder="Seu e-mail">
+            <!-- Campo de entrada específico para e-mail -->
         </div>
+
         <div class="mb-3">
             <label for="mensagem" class="form-label">Mensagem</label>
+            <!-- Rótulo do campo de mensagem -->
+
             <textarea class="form-control" id="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
+            <!-- Campo de texto maior para o usuário escrever a mensagem -->
         </div>
+
         <button type="submit" class="btn btn-primary">Enviar</button>
+        <!-- Botão para enviar o formulário -->
     </form>
 
-    <h2 class="display-5 mt-4">Imagem ilustrativa</h2>
-    <img src="{{ url_for('static', filename='imgs/contato-placeholder.jpg') }}" 
-         alt="Imagem contato" 
-         class="img-principal">
+  
+         
+    <!-- 
+    Exibe uma imagem da pasta static/imgs
+    url_for('static', ...) é usado no Flask para acessar arquivos estáticos
+    alt define uma descrição alternativa da imagem
+    img-principal é uma classe CSS personalizada
+    -->
 
     <a href="/inicio" class="btn btn-primary mt-4">Voltar ao Início</a>
+    <!-- Botão que leva o usuário de volta para a página inicial -->
+
 </div>
+
 {% endblock %}
+<!-- Final do bloco de conteúdo -->

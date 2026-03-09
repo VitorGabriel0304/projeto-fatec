@@ -1,44 +1,113 @@
 <!DOCTYPE html>
+<!-- Define que o documento usa HTML5 -->
+
 <html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+
 <head>
   <meta charset="UTF-8">
+  <!-- Define a codificação de caracteres (permite acentos e caracteres especiais) -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Faz a página ser responsiva em celulares e tablets -->
+
   <title>Sistema de Gestão</title>
-  
+  <!-- Título que aparece na aba do navegador -->
+
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Importa o arquivo CSS personalizado que está na pasta static/css -->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Importa o CSS do Bootstrap pela CDN para usar estilos prontos -->
 </head>
+
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- 
+  navbar → componente de navegação do Bootstrap
+  navbar-expand-lg → expande o menu em telas grandes
+  navbar-dark → estilo para fundo escuro
+  bg-dark → fundo escuro
+  -->
+
     <div class="container">
+    <!-- Container que centraliza o conteúdo da navbar -->
+
       <a class="navbar-brand" href="/">Sistema De Gestão</a>
+      <!-- Nome ou logo do site que leva para a página principal -->
+
       <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Área onde ficam os links de navegação -->
+
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="/inicio">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="/sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contato">Contato</a></li>
+        <!-- 
+        navbar-nav → lista de navegação
+        ms-auto → empurra os itens para a direita
+        -->
+
+          <li class="nav-item">
+            <a class="nav-link active" href="/inicio">Início</a>
+          </li>
+          <!-- Link da página inicial -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="/sobre">Sobre</a>
+          </li>
+          <!-- Link da página sobre -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="/contato">Contato</a>
+          </li>
+          <!-- Link da página de contato -->
+
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Conteúdo principal -->
+  <!-- Conteúdo principal da página -->
   <div class="container mt-5">
+  <!-- 
+  container → centraliza o conteúdo da página
+  mt-5 → margem superior para criar espaço após a navbar
+  -->
+
     <h1 class="display-4">Bem-vindo</h1>
+    <!-- Título principal grande usando tipografia do Bootstrap -->
+
     <p class="lead">
+    <!-- Classe "lead" destaca o parágrafo com fonte um pouco maior -->
       Este é o sistema desenvolvido ao longo do semestre na disciplina
       Programação para Internet — FATEC Jahu.
     </p>
+
     <a href="/sobre" class="btn btn-primary btn-lg">Saiba Mais</a>
+    <!-- 
+    Botão estilizado com Bootstrap
+    btn → transforma o link em botão
+    btn-primary → cor principal do Bootstrap
+    btn-lg → botão grande
+    -->
   </div>
 
   <img src="{{ url_for('static', filename='imgs/fatec foto.jfif') }}" 
        alt="Descrição da imagem" 
        class="img-principal">
+       
+  <!-- 
+  Exibe uma imagem da pasta static/imgs
+  url_for('static', ...) é usado no Flask para localizar arquivos estáticos
+  alt → descrição da imagem para acessibilidade
+  img-principal → classe CSS personalizada
+  -->
 
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <!-- Importa um arquivo JavaScript personalizado da pasta static/js -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Importa o JavaScript do Bootstrap para ativar componentes interativos -->
+  
 </body>
 </html>

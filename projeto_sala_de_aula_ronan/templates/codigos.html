@@ -1,35 +1,76 @@
 <!DOCTYPE html>
+<!-- Define que o documento usa HTML5 -->
+
 <html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+
 <head>
   <meta charset="UTF-8">
+  <!-- Define a codificação de caracteres para suportar acentos -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Permite que a página seja responsiva em celulares -->
+
   <title>Documento</title>
+  <!-- Título da aba do navegador -->
 </head>
+
 <body>
 
 <h1>Recebendo variaveis do Python</h1>
+<!-- Seção que mostra variáveis enviadas do Python (Flask) para o HTML -->
+
 <p><b> Nome </b> {{ nome }} </p>
+<!-- Exibe a variável "nome" enviada pelo Python -->
+
 <p><b> calculo da idade </b> nasceu em: [{{ ano_nascimento }}] e tem {{ idade }} anos</p>
+<!-- Mostra duas variáveis do Python: ano de nascimento e idade -->
+
 <p><b> voce tera 50 anos </b> {{ idade + 50 }}</p>
+<!-- Faz um cálculo diretamente no template somando 50 à idade -->
 
 <h1>Filtros de texto</h1>
+<!-- Seção demonstrando filtros de texto do Jinja -->
+
 <p>deixando o texto em maiusculas: {{ texto|upper }} </p>
+<!-- Filtro "upper" transforma o texto em letras maiúsculas -->
+
 <p>deixando o texto truncado: {{ texto|truncate(5) }} </p>
+<!-- Filtro "truncate" corta o texto para um tamanho específico -->
 
 <h1>usando IF/ELIF e ELSE</h1>
+<!-- Estrutura condicional do Jinja -->
+
 {% if ativo %}
 <p style="color: green">ATIVO</p>
+<!-- Se a variável "ativo" for verdadeira, mostra ATIVO em verde -->
+
 {% elif ativo == 'erro' %}
 <p style="color: red">ERRO</p>
+<!-- Se o valor de "ativo" for "erro", mostra ERRO em vermelho -->
+
 {% else %}
 <p style="color: yellow">INATIVO</p>
+<!-- Caso nenhuma das condições seja verdadeira, mostra INATIVO -->
+
 {% endif %}
+<!-- Final da estrutura condicional -->
 
 <h1>FOR</h1>
+<!-- Seção demonstrando repetição com loop -->
+
 <UL> 
+<!-- Lista não ordenada -->
+
 {% for user in pessoas %}
+<!-- Loop que percorre a lista "pessoas" enviada pelo Python -->
+
     <li>[{{ loop.index }}] - {{ user }}</li>
+    <!-- Mostra o número da posição (loop.index) e o nome da pessoa -->
+
 {% endfor %}
+<!-- Final do loop -->
+
 </UL>
 
 </body>
